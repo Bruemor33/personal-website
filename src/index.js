@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Welcome from '../public/views/home.js';
+import {Welcome} from '../public/views/home.js';
 import './index.scss';
 
 const Home = () => {
     return (
-        <div>
-            <Welcome />
-        </div>
+        <Welcome />
     )
 }
 
-ReactDOM.render(<Home />, document.getElementById('index'));
-
-console.log("HELLO WORLD!");
+ReactDOM.render(<Home /> , document.getElementById('index'));
