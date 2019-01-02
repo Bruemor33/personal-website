@@ -23,7 +23,9 @@ const TechSkillPartial = () => {
     const images = function() {
         for (var key in skillImages) {
             if (skillImages.hasOwnProperty(key)) {
-                console.log(key + " -> " + skillImages[key]);
+                let imgSrc = skillImages[key];
+
+                return imgSrc
             }
         }
     }
@@ -31,9 +33,10 @@ const TechSkillPartial = () => {
     return [
         <div key="3a" className="col-12">
             <div>
+                // Bring into for loop above
                 <div className="html">
                     <div>{images()}</div>
-                    <img src="./images/html5-logo.png" />
+                    <img src={images()} />
                 </div>            
             </div>
         </div>
